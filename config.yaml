@@ -1,0 +1,47 @@
+
+# Transportation Route Optimization Configuration
+
+algorithms:
+  genetic_algorithm:
+    population_size: 100
+    generations: 500
+    elite_size: 5
+    tournament_size: 5
+    mutation_rate: 0.02
+    crossover_rate: 0.8
+  
+  simulated_annealing:
+    initial_temperature: 1000
+    cooling_rate: 0.95
+    min_temperature: 1
+    max_iterations: 10000
+  
+  two_opt:
+    max_iterations: 1000
+    improvement_threshold: 0.01
+
+visualization:
+  map_center: [40.7128, -74.0060]  # New York City
+  zoom_level: 10
+  route_color: "#FF0000"
+  city_marker_color: "#0000FF"
+  marker_size: 8
+  line_weight: 3
+
+data:
+  default_cities_file: "data/sample_cities.json"
+  world_cities_file: "data/world_cities.csv"
+  cache_distance_matrix: true
+  distance_unit: "km"
+
+performance:
+  max_cities: 50
+  timeout_seconds: 300
+  parallel_processing: true
+  num_workers: 4
+
+web_interface:
+  title: "Transportation Route Optimizer"
+  theme: "light"
+  sidebar_width: 300
+  chart_height: 400
